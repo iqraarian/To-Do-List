@@ -1,0 +1,212 @@
+body{
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  line-height: 1.2;
+  color: #333;
+  background-color: rgb(198, 234, 231);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgb(198, 234, 231);
+  line-height: 1.7;
+}
+h1{
+  color: black;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 2.2rem;
+}
+.subtitle{
+  color: rgb(48, 145, 135);
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.task-form{
+  max-width: 700px;
+  height: 250px;
+  margin: 0 auto 20px;
+  background-color: whitesmoke;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 10px black;
+}
+.task-form h2{
+  margin-top: 0;
+  background-color: whitesmoke;
+  font-size: 1.2rem;
+  color: black;
+}
+.form-group{
+  margin-bottom: 15px;
+}
+.form-group label{
+  color: black;
+  font-weight: 400;
+  margin-bottom: 15px;
+  display: block;
+}
+.form-group input, .form-group textarea{
+  width: 100%;
+  background-color: rgb(198, 234, 231);
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.form-group textarea{
+  height: 150px;
+  resize: none;
+}
+.btn{
+  background-color: rgb(95, 247, 234);
+  padding: 8px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+.btn:hover{
+  background: #2980b9;
+}
+.task-controls{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+  margin: 0 auto 20px;
+  max-width: 800px;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 10px black;
+}
+.filters{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.filter-btn{
+  background: none;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: black;
+}
+.filter-btn.active{
+  background: #3498db;
+  color: white;
+}
+.filter-btn:hover{
+  background: #2980b9;
+  color: white;
+}
+.task-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.task-count{
+  margin: 0;
+  font-weight: 500;
+}
+.task-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.task{
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  background: whitesmoke;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  transition: all 0.3s;
+  width: 100%;
+}
+.task:hover{
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.task.completed{
+  opacity: 0.7;
+  background: #f9f9f9;
+}
+.task.completed .task-title{
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+.task-checkbox{
+  margin-right: 15px;
+  margin-top: 3px;
+}
+.task-content{
+  flex-grow: 1;
+}
+.task-title{
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+.task-description{
+  color: #7f8c8d;
+  margin: 0;
+  font-size: 14px;
+}
+.task-actions{
+  display: flex;
+  gap: 10px;
+  margin-left: 15px;
+}
+.task-actions button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #95a5a6;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.task-actions button:hover{
+  color: #3498db;
+}
+.edit-form{
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+}
+.edit-form input, .edit-form textarea{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.edit-form textarea{
+  min-height: 60px;
+}
+.edit-form-actions{
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+@media (max-width: 600px){
+  .task-controls{
+    padding: 15px;
+  }
+  .task-header{
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .filters{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

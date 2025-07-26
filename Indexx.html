@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO-LIST</title>
+    <link rel="stylesheet" href="./Styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>TO-DO-LIST</h1>
+      <p class="subtitle">Your Daily Task Manager</p>
+
+      <div class="task-form">
+        <h2>Add New Task</h2>
+        <div class="form-group">
+          <label for="task-title">Task Title</label>
+          <input type="text" id="task-title" placeholder="Enter your task"/>
+        </div>
+        <div class="form-group">
+          <label for="task-description">Discription(Optional)</label>
+          <input
+            type="text"
+            id="task-description"
+            placeholder="Add more detail about your task....."
+          />
+        </div>
+        <button id="add-task-btn" class="btn"> + Add Task</button>
+      </div>
+
+      <div class="task-controls">
+        <div class="filters">
+          <button class="filter-btn active" data-filters="all">All</button>
+          <button class="filter-btn" data-filters="active">Active</button>
+          <button class="filter-btn" data-filters="completed">Completed</button>
+        </div>
+        <div class="task-header">
+          <button id="clear-completed" class="btn">Clear Completed</button>
+          <div class="task-count">
+            <span id="count-text">0 task remaining (0 total)</span>
+          </div>
+        </div>
+
+        <div class="task-list" id="task-list">
+              <!-- Tasks will added there -->
+        </div>
+      </div>
+    </div>
+    <script src="./Script.js"></script>
+  </body>
+</html>
